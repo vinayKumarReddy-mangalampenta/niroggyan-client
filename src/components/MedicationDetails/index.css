@@ -1,0 +1,200 @@
+.medications-details-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+
+.medication-details-subheading {
+    display: block;
+    color: #686b72;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1aa0ef;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.medication-name {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(19, 67, 101);
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.medications-details {
+    width: 30%;
+    padding: 0 20px 20px 20px;
+
+}
+
+.medications-details:nth-child(2) {
+    width: 40%;
+}
+
+
+.medication-separator {
+    border-bottom: 3px dotted grey;
+    background-color: #e6e6e6;
+    margin: 0 20px 10px 20px;
+}
+
+.medication-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.dosage-usage {
+    height: 100px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    display: grid;
+
+}
+
+
+.tablet {
+    position: absolute;
+    bottom: 70px;
+
+}
+
+.direction-heading {
+    font-weight: 600;
+    margin: 0;
+    font-size: 22px;
+}
+
+.direction-details {
+    /* font-size: 16px; */
+    font-weight: 480;
+}
+
+.dosage-duration-con {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.transitionStep {
+    filter: grayscale(1);
+}
+
+.transitionStep.accomplished {
+    filter: grayscale(0);
+}
+
+.RSPBprogressBar .RSPBprogression {
+    border-radius: 0;
+}
+
+.RSPBprogressBar {
+    margin-top: auto;
+}
+
+
+
+
+.side-effects-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+
+    margin-bottom: 10px;
+}
+
+.medication-list-item {
+    list-style: none;
+    margin-bottom: 20px;
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.medication-list-item:hover {
+    scale: 1.009;
+    background-color: rgb(173, 221, 221);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.473);
+
+}
+
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.transitionStep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1aa0ef;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: #1aa0ef;
+}
+
+.transitionStep.accomplished {
+    background-color: #1aa0ef;
+    color: #fff;
+}
+
+.medications-details ul {
+    padding: 0;
+}
+
+.medications-details ul li {
+    margin-bottom: 8px;
+}
+
+
+
+.line {
+    border-left: 2px dotted black;
+    height: 30px;
+    left: 50%;
+    right: 50%;
+    position: absolute;
+    bottom: -28px;
+    transform: translateX("")
+}
+
+
+
+/* media queries */
+
+@media screen and (max-width:768px) {
+    .medications-details-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .medications-details {
+        width: 90%;
+    }
+
+    .medications-details-container>hr {
+        width: 100%;
+    }
+
+    .timing-of-usage {
+        font-size: 13px;
+    }
+}

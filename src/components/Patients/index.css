@@ -1,0 +1,85 @@
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/free-vector/healthcare-background-with-medical-symbols-hexagonal-frame_1017-26363.jpg');
+    background-size: cover;
+}
+
+.main-heading {
+    color: #000000;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.patients-list {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.patients-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.patient-card {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.patient-card:hover {
+    transform: translateY(-5px);
+}
+
+.patient-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.patient-details {
+    text-align: center;
+}
+
+.patient-details>h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.patient-details>p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.error-description {
+    font-size: 20px;
+    margin: 0;
+}
+
+.retry-button {
+    background-color: rgb(95, 95, 235);
+    width: 100px;
+    height: 36px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
