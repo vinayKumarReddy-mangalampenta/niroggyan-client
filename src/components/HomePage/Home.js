@@ -4,6 +4,7 @@ import Medications from "../Medications";
 import { Dna } from "react-loader-spinner";
 import axios from "axios";
 import "./index.css";
+import { useParams } from "react-router-dom";
 
 const API_STATUS = {
 	initial: "INTIAL",
@@ -13,15 +14,17 @@ const API_STATUS = {
 };
 
 const HomePage = () => {
+	const params = useParams();
 	const [apiStatus, setApiStatus] = useState(API_STATUS.initial);
 	const [patientData, setPatientData] = useState(null);
 
 	useEffect(() => {
 		const fetchData = async () => {
 			setApiStatus(API_STATUS.loading);
+
 			try {
 				const response = await axios.get(
-					`${process.env.REACT_APP_API_URL}/prescriptions/1`
+					`${process.env.REACT_APP_API_URL}/prescriptions/${params.patientID}`
 				);
 				console.log(response);
 				if (response.status === 200) {
@@ -37,7 +40,7 @@ const HomePage = () => {
 		};
 
 		fetchData();
-	}, []);
+	}, [params.patientID]);
 
 	const displayPrescriptions = () => {
 		const { name, dateOfBirth, dateOfIssue, medicationsData } = patientData;
